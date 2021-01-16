@@ -46,7 +46,8 @@ header .navbar-dashboard {
 
 header .navbar-item a,
 header .navbar-dashboard a,
-.navbar-login a {
+.navbar-login a,
+.topic-sections ul li a {
      color: #fff;
      text-decoration: none;
      font-size: 13px;
@@ -111,7 +112,9 @@ header .navbar-dashboard .user-name-section a {
 
 header .navbar-dashboard .user-name-section:hover a,
 header .navbar-dashboard .user-name-section:hover i,
-header .navbar-login a:nth-child(2n-1):hover {
+header .navbar-login a:nth-child(2n-1):hover,
+.topic-sections ul li a:hover,
+.topic-sections ul li a:hover i {
      color: #00bffe;
 }
 
@@ -275,4 +278,69 @@ header .status-header .status-item div span {
 
 header .navbar-login a i {
      margin-left: 5px;
+}
+
+.topic-sections ul {
+     width: 90%;
+     margin: auto;
+}
+
+.topic-sections {
+     height: 70px;
+     margin-bottom: 500px;
+     box-shadow: 0 3px 5px 1px #eee;
+}
+
+.topic-sections,
+.topic-sections ul,
+.topic-sections ul li a {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.topic-sections ul li {
+     list-style: none;
+}
+
+.topic-sections ul li a img {
+     height: 20px;
+}
+
+.topic-sections ul li a {
+     color: #000;
+     transition: 0.6s all;
+}
+
+.topic-sections ul li a i {
+     margin-right: 5px;
+     margin-top: 5px;
+     transition: 0.6s all;
+}
+
+.topic-sections ul li.adv-item a {
+     color: #00bffe;
+}
+
+.topic-sections ul li.adv-item {
+     animation: 1s ease infinite advertiseAnimation;
+     opacity: 0;
+}
+
+.topic-sections ul li.adv-item img {
+     background: transparent;
+}
+
+@keyframes advertiseAnimation {
+     0% {
+          opacity: 0;
+     }
+
+     50% {
+          opacity: 1;
+     }
+
+     100% {
+          opacity: 0;
+     }
 }
