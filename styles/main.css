@@ -1,5 +1,13 @@
 /** @format */
 
+:root {
+     --green-color: #5fb430;
+     --blue-color: #00bffe;
+     --white-color: #fff;
+     --light-color: #eee;
+     --gray-color: #ccc;
+}
+
 @font-face {
      src: url('../fonts/iransans.woff2');
      font-family: 'iransans';
@@ -33,7 +41,8 @@ header .navbar-dashboard li,
 .courses-demo .courses-demo-container .courses-demo-header div,
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-footer,
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-footer .course-duration,
-.courses-demo .courses-demo-container .courses-demo-body {
+.courses-demo .courses-demo-container .courses-demo-body,
+header .header-content .header-content-input-group {
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -45,22 +54,81 @@ header nav {
 }
 
 header .navbar-item,
-header .navbar-dashboard {
+header .navbar-dashboard,
+.topic-sections .topic-sections-menu li {
      list-style: none;
 }
 
 header .navbar-item a,
 header .navbar-dashboard a,
 .navbar-login a,
-.topic-sections .topic-sections-menu li a {
-     color: #fff;
+.topic-sections .topic-sections-menu li a,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .course-topic,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status a {
      text-decoration: none;
      font-size: 13px;
 }
 
+header .navbar-item a,
+header .navbar-dashboard a,
+.navbar-login a,
+.topic-sections .topic-sections-menu li a,
+header .navbar-login a:nth-child(1):hover i,
+header .header-content h1,
+header .status-header .status-item {
+     color: var(--white-color);
+}
+
+header .navbar-dashboard .user-name-section:hover a,
+header .navbar-dashboard .user-name-section:hover i,
+header .navbar-login a:nth-child(2n-1):hover,
+.topic-sections .topic-sections-menu li a:hover,
+.topic-sections .topic-sections-menu li a:hover i,
+.courses-demo .courses-demo-container .courses-demo-header i,
+.topic-sections .topic-sections-menu li.adv-item a,
+.topic-sections .dropdown-navbar li:nth-child(n + 1)::before,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .course-topic:hover,
+header .header-content .header-content-input-group i {
+     color: var(--blue-color) !important;
+}
+
+header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):hover a,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status div:hover a,
+header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):before,
+.topic-sections .dropdown-navbar li:nth-child(n + 1)::before,
+header .navbar-dashboard .dropdown-navbar li span,
+.topic-sections .dropdown-navbar li span,
+header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):before,
+.topic-sections .dropdown-navbar li:nth-child(n + 1)::before,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-footer .course-price {
+     color: var(--green-color);
+}
+
 header .navbar-item li,
-header .navbar-dashboard {
+header .navbar-dashboard,
+header .navbar-dashboard .dropdown-navbar li,
+.topic-sections .dropdown-navbar li,
+header .header-content .header-content-input-group,
+.topic-sections .topic-sections-menu li,
+.courses-demo,
+.courses-demo .courses-demo-container .courses-demo-header h4,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-body,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-footer {
      position: relative;
+}
+
+header .navbar-item li:nth-child(n + 2)::before,
+header .navbar-item .navbar-logo img,
+header .navbar-dashboard .user-name-section i,
+header .navbar-dashboard .user-name-section a,
+header .navbar-dashboard .dropdown-navbar,
+.topic-sections .dropdown-navbar,
+header .navbar-dashboard .dropdown-navbar a,
+.topic-sections .dropdown-navbar a,
+.topic-sections .topic-sections-menu li a,
+.topic-sections .topic-sections-menu li a i {
+     transition: 0.6s all;
 }
 
 header .navbar-item li:nth-child(n + 2)::before {
@@ -70,10 +138,9 @@ header .navbar-item li:nth-child(n + 2)::before {
      right: 0;
      height: 3px;
      width: 0;
-     background: #00bffe;
-     box-shadow: 0 0 7px #00bffe;
+     background: var(--blue-color);
+     box-shadow: 0 0 7px var(--blue-color);
      border-radius: 50px;
-     transition: 0.6s width ease;
 }
 
 header .navbar-item .navbar-logo:hover img {
@@ -92,39 +159,20 @@ header .navbar-item {
 header .navbar-item .navbar-logo img {
      height: 75px;
      width: 75px;
-     transition: 0.6s all;
 }
 
 header .navbar-dashboard .navbar-dashboard-user-image {
      height: 41px;
      width: 41px;
      border-radius: 50%;
-     box-shadow: 0 0 5px 1px #ccc;
+     box-shadow: 0 0 5px 1px var(--gray-color);
      margin-right: 20px;
      cursor: pointer;
 }
 
 header .navbar-dashboard .user-name-section i {
-     margin-left: 5px;
-     margin-top: 5px;
+     margin: 5px 0 0 5px;
      font-size: 10px;
-}
-
-header .navbar-dashboard .user-name-section i,
-header .navbar-dashboard .user-name-section a {
-     transition: 0.6s all;
-}
-
-header .navbar-dashboard .user-name-section:hover a,
-header .navbar-dashboard .user-name-section:hover i,
-header .navbar-login a:nth-child(2n-1):hover,
-.topic-sections .topic-sections-menu li a:hover,
-.topic-sections .topic-sections-menu li a:hover i {
-     color: #00bffe;
-}
-
-header .navbar-login a:nth-child(1):hover i {
-     color: #fff;
 }
 
 header .navbar-dashboard .dropdown-navbar.show-dropdown,
@@ -137,21 +185,20 @@ header .navbar-dashboard .dropdown-navbar,
 .topic-sections .dropdown-navbar {
      position: absolute;
      top: 140%;
-     background: #fff;
+     background: var(--white-color);
      padding: 15px;
      width: 200px;
      left: 50%;
      transform: translateX(-50%);
      border-radius: 5px;
-     box-shadow: 0 0 5px 1px #fff;
+     box-shadow: 0 0 5px 1px var(--white-color);
      opacity: 0;
      visibility: hidden;
-     transition: 0.5s all;
      z-index: 50;
 }
 
 header .navbar-dashboard .dropdown-navbar li:first-child {
-     border-bottom: 1px solid #eee;
+     border-bottom: 1px solid var(--light-color);
      padding-bottom: 10px;
 }
 
@@ -159,16 +206,6 @@ header .navbar-dashboard .dropdown-navbar li,
 .topic-sections .dropdown-navbar li {
      margin-bottom: 7px;
      justify-content: flex-start;
-     position: relative;
-}
-
-header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):hover a,
-.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status div:hover a,
-header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):before,
-.topic-sections .dropdown-navbar li:nth-child(n + 1)::before,
-header .navbar-dashboard .dropdown-navbar li span,
-.topic-sections .dropdown-navbar li span {
-     color: #5fb430;
 }
 
 header .navbar-dashboard .dropdown-navbar li:nth-child(1) a {
@@ -182,7 +219,6 @@ header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):before,
      top: 60%;
      font-size: 22px;
      transform: translateY(-50%);
-     color: #5fb430;
 }
 
 header .navbar-dashboard .dropdown-navbar a,
@@ -190,7 +226,6 @@ header .navbar-dashboard .dropdown-navbar a,
      color: #222b30;
      font-size: 13px;
      padding-right: 13px;
-     transition: 0.6s all;
 }
 
 header .header-content {
@@ -203,23 +238,18 @@ header .header-content {
 }
 
 header .header-content h1 {
-     color: #fff;
      font-size: 26px;
      font-weight: 400;
      line-height: 55px;
 }
 
 header .header-content .header-content-input-group {
-     position: relative;
      height: 50px;
      width: 650px;
      border-radius: 50px;
-     background: #fff;
-     margin: auto;
-     display: flex;
+     background: var(--white-color);
+     margin: 50px auto auto;
      justify-content: center;
-     align-items: center;
-     margin-top: 50px;
      box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
@@ -237,7 +267,6 @@ header .header-content .header-content-input-group input {
 header .header-content .header-content-input-group i {
      position: absolute;
      left: 3%;
-     color: #00bffe;
      font-size: 15px;
      z-index: 999;
      top: 50%;
@@ -263,14 +292,12 @@ header .status-header {
 header .status-header,
 header .status-header .status-item,
 header .status-header .status-item div {
-     display: flex;
-     align-items: center;
+     justify-content: unset;
 }
 
 header .status-header .status-item {
      height: 160px;
      width: 180px;
-     color: #fff;
      justify-content: center;
 }
 
@@ -300,23 +327,24 @@ header .navbar-login a i {
 
 .topic-sections {
      height: 70px;
-     box-shadow: 0 3px 5px 1px #eee;
+     box-shadow: 0 3px 5px 1px var(--light-color);
 }
 
 .topic-sections,
 .topic-sections .topic-sections-menu,
-.topic-sections .topic-sections-menu li a {
+.topic-sections .topic-sections-menu li a,
+.topic-sections .topic-sections-menu li,
+header .status-header,
+header .status-header .status-item,
+header .status-header .status-item div {
      display: flex;
      justify-content: space-between;
      align-items: center;
 }
 
 .topic-sections .topic-sections-menu li {
-     list-style: none;
-     display: flex;
-     align-items: center;
+     justify-content: unset;
      height: 100%;
-     position: relative;
 }
 
 .topic-sections .topic-sections-menu li a img {
@@ -325,17 +353,10 @@ header .navbar-login a i {
 
 .topic-sections .topic-sections-menu li a {
      color: #000;
-     transition: 0.6s all;
 }
 
 .topic-sections .topic-sections-menu li a i {
-     margin-right: 5px;
-     margin-top: 5px;
-     transition: 0.6s all;
-}
-
-.topic-sections .topic-sections-menu li.adv-item a {
-     color: #00bffe;
+     margin: 5px 5px 0 0;
 }
 
 .topic-sections .topic-sections-menu li.adv-item {
@@ -363,11 +384,7 @@ header .navbar-login a i {
 
 .topic-sections .dropdown-navbar {
      top: 100%;
-     box-shadow: 0 0 5px 1px #eee;
-}
-
-.topic-sections .dropdown-navbar li:nth-child(n + 1)::before {
-     color: #00bffe;
+     box-shadow: 0 0 5px 1px var(--light-color);
 }
 
 .topic-sections .dropdown-navbar li:last-child {
@@ -375,7 +392,6 @@ header .navbar-login a i {
 }
 
 .courses-demo {
-     position: relative;
      padding: 20px 0;
 }
 
@@ -383,21 +399,24 @@ header .navbar-login a i {
      width: 85%;
      margin: auto;
 }
-.courses-demo .courses-demo-container .courses-demo-header h4 {
-     position: relative;
-     background: #fff;
-     padding: 15px;
+
+.courses-demo .courses-demo-container .courses-demo-header h4,
+.courses-demo .courses-demo-container .courses-demo-header span,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .course-topic {
      color: #1e2f38;
+}
+
+.courses-demo .courses-demo-container .courses-demo-header h4 {
+     background: var(--white-color);
+     padding: 15px;
      font-size: 18px;
 }
 
 .courses-demo .courses-demo-container .courses-demo-header span {
-     color: #1e2f38;
      font-size: 15px;
 }
 
 .courses-demo .courses-demo-container .courses-demo-header i {
-     color: #00bffe;
      font-size: 15px;
      margin-right: 10px;
 }
@@ -421,7 +440,7 @@ header .navbar-login a i {
 
 .courses-demo .courses-demo-container .courses-demo-header h4::after {
      width: 20%;
-     background: #00bffe;
+     background: var(--blue-color);
      opacity: 1;
      z-index: 2;
 }
@@ -438,19 +457,9 @@ header .navbar-login a i {
      margin-top: 30px;
      width: 250px;
      overflow: hidden;
-     box-shadow: 0 0 5px 1px #eee;
+     box-shadow: 0 0 5px 1px var(--light-color);
      align-items: unset;
      border-radius: 5px;
-}
-
-.courses-demo .courses-demo-container .courses-demo-body .courses-card .course-topic {
-     font-size: 14px;
-     text-decoration: none;
-     color: #1e2f38;
-     font-weight: 100;
-}
-.courses-demo .courses-demo-container .courses-demo-body .courses-card .course-topic:hover {
-     color: #00bffe;
 }
 
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status {
@@ -462,9 +471,7 @@ header .navbar-login a i {
 
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status,
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status a {
-     text-decoration: none;
      color: #778286;
-     font-size: 13px;
 }
 
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .course-topic,
@@ -496,16 +503,15 @@ header .navbar-login a i {
 }
 
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-footer .course-duration {
-     color: #00b3e9;
+     color: var(--blue-color);
      font-size: 15px;
 }
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-footer .course-price {
-     color: #5fb430;
      font-size: 17px;
 }
 
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-footer {
-     border-top: 1px solid #eee;
+     border-top: 1px solid var(--light-color);
 }
 
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-body::before {
@@ -523,6 +529,5 @@ header .navbar-login a i {
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-body,
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-footer {
      padding: 5px 0;
-     position: relative;
      z-index: 3;
 }
