@@ -147,6 +147,7 @@ header .navbar-dashboard .dropdown-navbar,
      opacity: 0;
      visibility: hidden;
      transition: 0.5s all;
+     z-index: 50;
 }
 
 header .navbar-dashboard .dropdown-navbar li:first-child {
@@ -161,7 +162,12 @@ header .navbar-dashboard .dropdown-navbar li,
      position: relative;
 }
 
-header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):hover a {
+header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):hover a,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status div:hover a,
+header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):before,
+.topic-sections .dropdown-navbar li:nth-child(n + 1)::before,
+header .navbar-dashboard .dropdown-navbar li span,
+.topic-sections .dropdown-navbar li span {
      color: #5fb430;
 }
 
@@ -185,11 +191,6 @@ header .navbar-dashboard .dropdown-navbar a,
      font-size: 13px;
      padding-right: 13px;
      transition: 0.6s all;
-}
-
-header .navbar-dashboard .dropdown-navbar li span,
-.topic-sections .dropdown-navbar li span {
-     color: #5fb430;
 }
 
 header .header-content {
@@ -292,7 +293,7 @@ header .navbar-login a i {
 }
 
 .topic-sections .topic-sections-menu {
-     width: 90%;
+     width: 85%;
      height: 100%;
      margin: auto;
 }
@@ -442,21 +443,31 @@ header .navbar-login a i {
      border-radius: 5px;
 }
 
-.courses-demo .courses-demo-container .courses-demo-body .courses-card h4 {
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .course-topic {
      font-size: 14px;
+     text-decoration: none;
      color: #1e2f38;
      font-weight: 100;
+}
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .course-topic:hover {
+     color: #00bffe;
 }
 
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status {
      display: flex;
-     color: #778286;
      width: 100%;
-     font-size: 13px;
      margin: 10px 0;
+     cursor: pointer;
 }
 
-.courses-demo .courses-demo-container .courses-demo-body .courses-card h4,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status,
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status a {
+     text-decoration: none;
+     color: #778286;
+     font-size: 13px;
+}
+
+.courses-demo .courses-demo-container .courses-demo-body .courses-card .course-topic,
 .courses-demo .courses-demo-container .courses-demo-body .courses-card .courses-card-status {
      white-space: nowrap;
      overflow: hidden;
