@@ -47,7 +47,7 @@ header .navbar-dashboard {
 header .navbar-item a,
 header .navbar-dashboard a,
 .navbar-login a,
-.topic-sections ul li a {
+.topic-sections .topic-sections-menu li a {
      color: #fff;
      text-decoration: none;
      font-size: 13px;
@@ -113,8 +113,8 @@ header .navbar-dashboard .user-name-section a {
 header .navbar-dashboard .user-name-section:hover a,
 header .navbar-dashboard .user-name-section:hover i,
 header .navbar-login a:nth-child(2n-1):hover,
-.topic-sections ul li a:hover,
-.topic-sections ul li a:hover i {
+.topic-sections .topic-sections-menu li a:hover,
+.topic-sections .topic-sections-menu li a:hover i {
      color: #00bffe;
 }
 
@@ -122,12 +122,14 @@ header .navbar-login a:nth-child(1):hover i {
      color: #fff;
 }
 
-header .navbar-dashboard .dropdown-navbar.show-dropdown {
+header .navbar-dashboard .dropdown-navbar.show-dropdown,
+.topic-sections .dropdown-navbar.show-dropdown {
      visibility: visible;
      opacity: 1;
 }
 
-header .navbar-dashboard .dropdown-navbar {
+header .navbar-dashboard .dropdown-navbar,
+.topic-sections .dropdown-navbar {
      position: absolute;
      top: 140%;
      background: #fff;
@@ -147,7 +149,8 @@ header .navbar-dashboard .dropdown-navbar li:first-child {
      padding-bottom: 10px;
 }
 
-header .navbar-dashboard .dropdown-navbar li {
+header .navbar-dashboard .dropdown-navbar li,
+.topic-sections .dropdown-navbar li {
      margin-bottom: 7px;
      justify-content: flex-start;
      position: relative;
@@ -161,7 +164,8 @@ header .navbar-dashboard .dropdown-navbar li:nth-child(1) a {
      cursor: text;
 }
 
-header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):before {
+header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):before,
+.topic-sections .dropdown-navbar li:nth-child(n + 1)::before {
      content: '• ';
      position: absolute;
      top: 60%;
@@ -170,14 +174,16 @@ header .navbar-dashboard .dropdown-navbar li:nth-child(n + 2):before {
      color: #5fb430;
 }
 
-header .navbar-dashboard .dropdown-navbar a {
+header .navbar-dashboard .dropdown-navbar a,
+.topic-sections .dropdown-navbar a {
      color: #222b30;
      font-size: 13px;
      padding-right: 13px;
      transition: 0.6s all;
 }
 
-header .navbar-dashboard .dropdown-navbar li span {
+header .navbar-dashboard .dropdown-navbar li span,
+.topic-sections .dropdown-navbar li span {
      color: #5fb430;
 }
 
@@ -280,8 +286,9 @@ header .navbar-login a i {
      margin-left: 5px;
 }
 
-.topic-sections ul {
+.topic-sections .topic-sections-menu {
      width: 90%;
+     height: 100%;
      margin: auto;
 }
 
@@ -292,42 +299,46 @@ header .navbar-login a i {
 }
 
 .topic-sections,
-.topic-sections ul,
-.topic-sections ul li a {
+.topic-sections .topic-sections-menu,
+.topic-sections .topic-sections-menu li a {
      display: flex;
      justify-content: space-between;
      align-items: center;
 }
 
-.topic-sections ul li {
+.topic-sections .topic-sections-menu li {
      list-style: none;
+     display: flex;
+     align-items: center;
+     height: 100%;
+     position: relative;
 }
 
-.topic-sections ul li a img {
+.topic-sections .topic-sections-menu li a img {
      height: 20px;
 }
 
-.topic-sections ul li a {
+.topic-sections .topic-sections-menu li a {
      color: #000;
      transition: 0.6s all;
 }
 
-.topic-sections ul li a i {
+.topic-sections .topic-sections-menu li a i {
      margin-right: 5px;
      margin-top: 5px;
      transition: 0.6s all;
 }
 
-.topic-sections ul li.adv-item a {
+.topic-sections .topic-sections-menu li.adv-item a {
      color: #00bffe;
 }
 
-.topic-sections ul li.adv-item {
+.topic-sections .topic-sections-menu li.adv-item {
      animation: 1s ease infinite advertiseAnimation;
      opacity: 0;
 }
 
-.topic-sections ul li.adv-item img {
+.topic-sections .topic-sections-menu li.adv-item img {
      background: transparent;
 }
 
@@ -343,4 +354,17 @@ header .navbar-login a i {
      100% {
           opacity: 0;
      }
+}
+
+.topic-sections .dropdown-navbar {
+     top: 100%;
+     box-shadow: 0 0 5px 1px #eee;
+}
+
+.topic-sections .dropdown-navbar li:nth-child(n + 1)::before {
+     color: #00bffe;
+}
+
+.topic-sections .dropdown-navbar li:last-child {
+     margin-bottom: 0;
 }
