@@ -6,558 +6,98 @@
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Toplearn Home Page</title>
-          <!-- config css -->
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
           <link rel="stylesheet" href="/styles/main.css" />
      </head>
      <body>
-          <!-- config landing page and header -->
-          <header>
-               <nav>
-                    <ul class="navbar-item">
-                         <li>
-                              <a href="#" class="navbar-logo"><img src="/images/logo.svg" alt="" /></a>
-                         </li>
-                         <li><a href="#">آخرین دوره ها</a></li>
-                         <li><a href="#">معرفی مدرسین</a></li>
-                         <li><a href="#">بلاگ</a></li>
-                         <li><a href="#">پرسش و پاسخ</a></li>
-                         <li><a href="#">درخواست مشاوره</a></li>
-                         <li><a href="#">همکاری با تاپ لرن</a></li>
-                         <li><a href="#">تماس با ما</a></li>
-                         <li><a href="#">درباره ما</a></li>
-                    </ul>
-                    <!-- <div class="navbar-login">
-                         <a href="#">
-                              <i class="fa fa-user-o"></i>
-                              ورود
-                         </a>
-                         <a href="#">/</a>
-                         <a href="#"> ثبت نام </a>
-                    </div> -->
-                    <ul class="navbar-dashboard">
-                         <li>
-                              <a href="#">
-                                   <div class="user-name-section">
-                                        <i class="fa fa-caret-down"></i>
-                                        <a href="#">حسین لادمخی نژاد</a>
-                                   </div>
-                                   <img class="navbar-dashboard-user-image" src="../images/defaultImageUser.png" alt="" />
+          <!-- config header start -->
+
+          <header class="header">
+               <nav class="header__nav d-flex flex-between">
+                    <ul class="header__list header__list--large d-flex flex-between">
+                         <li class="header__item">
+                              <a href="#" class="header__link">
+                                   <img src="/images/logo.svg" class="header__logo" />
                               </a>
                          </li>
-                         <div class="dropdown-navbar">
-                              <ul>
-                                   <li>
-                                        <a href="#">موجودی شما :<span> 0 تومان</span></a>
-                                   </li>
-                                   <li><a href="#">مشاهده حساب کاربری</a></li>
-                                   <li><a href="#">ویرایش حساب کاربری</a></li>
-                                   <li><a href="#">تغییر رمز عبور</a></li>
-                                   <li><a href="#">کیف پول من</a></li>
-                                   <li><a href="#">فاکتورهای من</a></li>
-                                   <li><a href="#">دوره های من</a></li>
-                                   <li><a href="#">تیکت ها</a></li>
-                                   <li><a href="#">خروج از حساب کاربری</a></li>
-                              </ul>
-                         </div>
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white"> آخرین دوره ها </a>
+                         </li>
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white">معرفی مدرسین</a>
+                         </li>
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white">بلاگ</a>
+                         </li>
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white">پرسش و پاسخ</a>
+                         </li>
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white">درخواست مشاوره</a>
+                         </li>
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white">همکاری با تاپ لرن</a>
+                         </li>
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white">تماس با ما</a>
+                         </li>
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white">درباره ما</a>
+                         </li>
+                    </ul>
+
+                    <ul class="header__list header__list--small d-flex flex-center">
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white">
+                                   <i class="fa fa-caret-down header__icon"></i>
+                                   حسین لادمخی نژاد
+                              </a>
+                         </li>
+                         <li class="header__item">
+                              <a href="#" class="header__link text-white">
+                                   <img src="/images/defaultImageUser.png" alt="" class="header__userimage" />
+                              </a>
+                         </li>
                     </ul>
                </nav>
 
-               <div class="header-content">
-                    <h1>خودآموزی ، کسب تجربه ، ورود به بازار کار با تاپ لرن</h1>
-                    <h1>با کمترینــــ هزینه خودت حرفه ایــــ یاد بگیـر</h1>
+               <div class="header__content d-flex flex-center">
+                    <h1 class="header__title text-white">خودآموزی ، کسب تجربه ، ورود به بازار کار با تاپ لرن</h1>
+                    <h1 class="header__title text-white">با کمترینــــ هزینه خودت حرفه ایــــ یاد بگیـر</h1>
 
-                    <div class="header-content-input-group">
-                         <input type="text" placeholder="چی میخای یاد بگیری ؟؟" />
-                         <i class="fa fa-search"></i>
+                    <div class="header__search">
+                         <input type="text" class="header__input" placeholder="چی میخای یاد بگیری ؟؟؟" />
+                         <i class="fa fa-search header__icon-search"></i>
                     </div>
 
-                    <div class="status-header">
-                         <div class="status-item">
-                              <span>241,256</span>
-                              <div>
-                                   <img src="../images/status/status-student.svg" alt="" />
-                                   <span>دقیقه آموزش</span>
+                    <div class="header__status d-flex flex-between">
+                         <div class="header__status-item d-flex flex-center">
+                              <span class="header__status-value text-white">215,101</span>
+                              <div class="header__status-column d-flex flex-center">
+                                   <img src="/images/status/status-time.svg" class="header__status-image" alt="" />
+                                   <span class="header__status-text text-white">دقیقه آموزش</span>
                               </div>
                          </div>
-                         <div class="status-item">
-                              <span>131</span>
-                              <div>
-                                   <img src="../images/status/status-teacher.svg" alt="" />
-                                   <span>مدرس مجرب</span>
+                         <div class="header__status-item d-flex flex-center">
+                              <span class="header__status-value text-white">131</span>
+                              <div class="header__status-column d-flex flex-center">
+                                   <img src="/images/status/status-teacher.svg" class="header__status-image" alt="" />
+                                   <span class="header__status-text text-white">مدرس مجرب</span>
                               </div>
                          </div>
-                         <div class="status-item">
-                              <span>181,259</span>
-                              <div>
-                                   <img src="../images/status/status-student.svg" alt="" />
-                                   <span>نفر دانشجو</span>
+                         <div class="header__status-item d-flex flex-center">
+                              <span class="header__status-value text-white">171, 714</span>
+                              <div class="header__status-column d-flex flex-center">
+                                   <img src="/images/status/status-student.svg" class="header__status-image" alt="" />
+                                   <span class="header__status-text text-white">نفر دانشجو</span>
                               </div>
                          </div>
                     </div>
                </div>
           </header>
-          <!-- end header config -->
 
-          <!-- section config start -->
-          <section class="topic-sections">
-               <ul class="topic-sections-menu">
-                    <li class="topic-sections-menu-item">
-                         <a href="#">
-                              برنامه نویسی موبایل
-                              <i class="fa fa-angle-down"></i>
-                         </a>
+          <!-- config header end -->
 
-                         <div class="dropdown-navbar">
-                              <ul>
-                                   <li><a href="#">زامارین (Xamarine)</a></li>
-                                   <li><a href="#">Kotlin</a></li>
-                                   <li><a href="#">Ionic</a></li>
-                                   <li><a href="#">Android</a></li>
-                                   <li><a href="#">Cordova</a></li>
-                                   <li><a href="#">PWA</a></li>
-                                   <li><a href="#">Dart</a></li>
-                                   <li><a href="#">Flutter</a></li>
-                              </ul>
-                         </div>
-                    </li>
-                    <li class="topic-sections-menu-item">
-                         <a href="#">
-                              برنامه نویسی وب
-                              <i class="fa fa-angle-down"></i>
-                         </a>
-
-                         <div class="dropdown-navbar">
-                              <ul>
-                                   <li><a href="#">ASP.NET WebForms</a></li>
-                                   <li><a href="#">ASP.NET MVC</a></li>
-                                   <li><a href="#">PHP</a></li>
-                                   <li><a href="#">ASP.NET Core</a></li>
-                                   <li><a href="#">Wordpress</a></li>
-                                   <li><a href="#">Blazor</a></li>
-                                   <li><a href="#">Django</a></li>
-                                   <li><a href="#">GraphQL</a></li>
-                              </ul>
-                         </div>
-                    </li>
-                    <li class="topic-sections-menu-item">
-                         <a href="#">
-                              طراحی سایت
-                              <i class="fa fa-angle-down"></i>
-                         </a>
-                         <div class="dropdown-navbar">
-                              <ul>
-                                   <li><a href="#">ASP.NET WebForms</a></li>
-                                   <li><a href="#">ASP.NET MVC</a></li>
-                                   <li><a href="#">PHP</a></li>
-                                   <li><a href="#">ASP.NET Core</a></li>
-                                   <li><a href="#">Wordpress</a></li>
-                                   <li><a href="#">Blazor</a></li>
-                                   <li><a href="#">Django</a></li>
-                                   <li><a href="#">GraphQL</a></li>
-                              </ul>
-                         </div>
-                    </li>
-                    <li class="topic-sections-menu-item">
-                         <a href="#">
-                              بانک های اطلاعاتی
-                              <i class="fa fa-angle-down"></i>
-                         </a>
-
-                         <div class="dropdown-navbar">
-                              <ul>
-                                   <li><a href="#">SQL Server</a></li>
-                                   <li><a href="#">PostGress</a></li>
-                                   <li><a href="#">MongoDB</a></li>
-                                   <li><a href="#">SQL</a></li>
-                                   <li><a href="#">NO SQL</a></li>
-                                   <li><a href="#">MySQL</a></li>
-                                   <li><a href="#">MariaDB</a></li>
-                                   <li><a href="#">Redis</a></li>
-                              </ul>
-                         </div>
-                    </li>
-                    <li class="topic-sections-menu-item">
-                         <a href="#">
-                              برنامه نویسی تحت ویندوز
-                              <i class="fa fa-angle-down"></i>
-                         </a>
-
-                         <div class="dropdown-navbar">
-                              <ul>
-                                   <li><a href="#">CSharp</a></li>
-                                   <li><a href="#">NodeJS</a></li>
-                                   <li><a href="#">Python</a></li>
-                                   <li><a href="#">C++</a></li>
-                                   <li><a href="#">JAVA</a></li>
-                                   <li><a href="#">GO</a></li>
-                                   <li><a href="#">مهندسی نرم افزار</a></li>
-                                   <li><a href="#">بازی سازی</a></li>
-                                   <li><a href="#">Visual Basic</a></li>
-                                   <li><a href="#">WPF</a></li>
-                                   <li><a href="#">C</a></li>
-                                   <li><a href="#">Adobe</a></li>
-                                   <li><a href="#">Scratch</a></li>
-                              </ul>
-                         </div>
-                    </li>
-                    <li class="topic-sections-menu-item">
-                         <a href="#"> سئو </a>
-                    </li>
-                    <li class="topic-sections-menu-item">
-                         <a href="#">
-                              سیستم عامل
-                              <i class="fa fa-angle-down"></i>
-                         </a>
-
-                         <div class="dropdown-navbar">
-                              <ul>
-                                   <li><a href="#">مدیریت پروژه</a></li>
-                                   <li><a href="#">Linux</a></li>
-                                   <li><a href="#">اینترنت</a></li>
-                                   <li><a href="#">Docker</a></li>
-                                   <li><a href="#">ساخت ستاپ</a></li>
-                                   <li><a href="#">برنامه های کاربردی</a></li>
-                                   <li><a href="#">Network</a></li>
-                                   <li><a href="#">Security</a></li>
-                              </ul>
-                         </div>
-                    </li>
-                    <li class="topic-sections-menu-item">
-                         <a href="#">
-                              گرافیک
-                              <i class="fa fa-angle-down"></i>
-                         </a>
-
-                         <div class="dropdown-navbar">
-                              <ul>
-                                   <li><a href="#">Photoshop</a></li>
-                                   <li><a href="#">Graphic</a></li>
-                                   <li><a href="#">Motion Graphic</a></li>
-                                   <li><a href="#">Design Logo</a></li>
-                                   <li><a href="#">Illustrator</a></li>
-                                   <li><a href="#">Corel Draw</a></li>
-                                   <li><a href="#">3D MAX</a></li>
-                              </ul>
-                         </div>
-                    </li>
-                    <li class="topic-sections-menu-item">
-                         <a href="#">امنیت </a>
-                    </li>
-                    <li class="adv-item">
-                         <a href="#">
-                              <img src="../images/Deaf.png" alt="" />
-                              مخصوص ناشنوایان
-                         </a>
-                    </li>
-               </ul>
-          </section>
-          <!-- section config end -->
-
-          <!-- demo of course -->
-          <section class="courses-demo">
-               <div class="courses-demo-container">
-                    <div class="courses-demo-header">
-                         <h4>آخرین دوره های تاپ لرن</h4>
-                         <div class="courses-demo-header-anchor">
-                              <span>مشاهده همه دوره ها</span>
-                              <i class="fa fa-arrow-left"></i>
-                         </div>
-                    </div>
-                    <div class="courses-demo-body">
-                         <div class="courses-card">
-                              <img src="../images/courses/WebDesign.png" alt="" />
-                              <div class="courses-card-body">
-                                   <a href="#" class="course-topic">طراحی وب پیشرفته + 12 پروژه عملی</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">معصومی</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>97</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                        16:23:00
-                                   </span>
-                                   <span class="course-price">120,000 تومان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/js.png" alt="" />
-                              <div class="courses-card-body">
-                                <a href="#" class="course-topic">برنامه نویسی شی گرا در جاوا اسکریپت</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">قربانی</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>1400</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                        45:02:59
-                                   </span>
-                                   <span class="course-price">رایگان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/Indesign.jpg" alt="" />
-                              <div class="courses-card-body">
-                                   <a href="#" class="course-topic">آموزش متخصص ایندیزاین</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">جعفری</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>0</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                      00:09:00
-                                   </span>
-                                   <span class="course-price">80,000 تومان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/Azure.png" alt="" />
-                              <div class="courses-card-body">
-                                  <a href="#" class="course-topic"> آموزش Microsoft Azure DevOps </a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">محمدی</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>6395</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                 8:24:00
-                                   </span>
-                                   <span class="course-price">900,000 تومان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/html.jpg" alt="" />
-                              <div class="courses-card-body">
-                                  <a href="#" class="course-topic">آموزش رایگان Html و Css</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">خسروجردی</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>793</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                   19:30:00
-                                   </span>
-                                   <span class="course-price">رایگان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/hackes.png" alt="" />
-                              <div class="courses-card-body">
-                                   <a href="#" class="course-topic">آموزش رایگان پایتون برای هکرها</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">یلمه</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>190</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                      6:50:00
-                                   </span>
-                                   <span class="course-price">رایگان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/node.jpg" alt="" />
-                              <div class="courses-card-body">
-                                 <a href="#" class="course-topic">دوره آموزش جامع NodeJs</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">قربانی</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>332</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                        22:48:00
-                                   </span>
-                                   <span class="course-price">300,000 تومان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/scratch.png" alt="" />
-                              <div class="courses-card-body">
-                                   <a href="#" class="course-topic">آموزش بازی سازی به کودکان با اسکرچ</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">خاوریان</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>697</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                      4:10:00
-                                   </span>
-                                   <span class="course-price">40,000 تومان<span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/Kano.png" alt="" />
-                              <div class="courses-card-body">
-                                   <a href="#" class="course-topic">آموزش طراحی با سایت کانوا</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">عنایتی</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>6</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                        1:10:00
-                                   </span>
-                                   <span class="course-price">رایگان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/algorithm.png" alt="" />
-                              <div class="courses-card-body">
-                                   <a href="#" class="course-topic">ساختمان داده و الگوریتم- قسمت اول</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">اثنی عشری</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>26</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                        5:35:00
-                                   </span>
-                                   <span class="course-price">رایگان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/python.png" alt="" />
-                              <div class="courses-card-body">
-                                   <a href="#" class="course-topic">آموزش جامع هوش مصنوعی با پایتون ( Python )</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#">اردوخانی</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>0</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                        5:23:00
-                                   </span>
-                                   <span class="course-price">500,000 تومان</span>
-                              </div>
-                         </div>
-
-                         <div class="courses-card">
-                              <img src="../images/courses/Git.png" alt="" />
-                              <div class="courses-card-body">
-                                   <a href="#" class="course-topic">آموزش جامع Git از مقدماتی</a>
-                                   <div class="courses-card-status">
-                                        <div>
-                                             <i class="fa fa-user"></i>
-                                             <a href="#" class="course-teacher">قاری</a>
-                                        </div>
-                                        <div>
-                                             <i class="fa fa-comment"></i>
-                                             <span>91537</span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="courses-card-footer">
-                                   <span class="course-duration">
-                                        <img src="../images/clock.png" alt="" />
-                                        3:52:00
-                                   </span>
-                                   <span class="course-price">340,000 تومان</span>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </section>
-          <!-- end demo of course -->
-
-          <!-- config js -->
-          <script src="../behavior/main.js"></script>
+          <script src="/behavior/main.js"></script>
      </body>
 </html>
